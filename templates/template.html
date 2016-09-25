@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Occupation Table </title>
+  </head>
+
+  <body>
+    <table>
+      
+    {% for x,y in data.items() %}
+     <tr>
+       <td>{{x}}</td>
+       <td>{{y}}</td>
+     </tr>
+    {% endfor %}
+     </table>
+  </body>
+
+  <p>Your job is {{chosen}} !!</p>
+</html>

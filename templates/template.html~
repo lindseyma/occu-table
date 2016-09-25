@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> {{ Occupation Table }} </title>
+  </head>
+
+  <body>
+    <table>
+      
+    {% for item in getOccupation() %}
+     {{ item }}
+     <br>
+    {% endfor %}
+  </body>
+
+</html>

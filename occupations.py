@@ -1,6 +1,7 @@
 from random import random
 from flask import Flask, render_template
 
+app = Flask(__name__)
 ##def readFile():
 ##    file_ = open('occupations.csv')
 ##    instream = file_.readlines()
@@ -47,3 +48,11 @@ if __name__ == '__main__':
     classPercentages = readFile()
     for i in classPercentages:
         print i, classPercentages.get(i), result.get(i)
+
+@app.route('/')
+def display():
+    occupationDictionary = readFile()
+    return render_template("template.html", data=occupationDictionary, chosen=getOccupation())
+
+app.run()
+app.debug()
