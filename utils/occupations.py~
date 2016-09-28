@@ -1,9 +1,5 @@
 from random import random
 
-##def readFile():
-##    file_ = open('occupations.csv')
-##    instream = file_.readlines()
-
 def readFile():
     try:
         with open('occupations.csv') as file_:
